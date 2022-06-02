@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url('../font/AlfaSlabOne-Regular.ttf');
+    font-family: 'Regular';
+}
+@font-face {
+    src: url('../font/EncodeSansSC-VariableFont_wdth,wght.ttf');
+    font-family: 'VariableFont';
+}
+@font-face {
+    src: url('../font/Kranky-Regular.ttf');
+    font-family: 'Kranky';
+}
+html{
+    font-size: 10px;
+}
+img{
+    width: 100%;
+    display: block;
+}
+input{
+    outline: none;
+}
+#app{
+    width: 100vw;
+    height: 100vh;
+}
+.appHeader{
+    width: 100%;
+    height: 8rem;
+    background-color: #F1F1FB;
+    border-bottom: 1px solid #D2D2D2;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: Impact;
+}
+.searchIpt{
+    width: 30rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    border: 1px solid #D2D2D2;
+    padding: 0 4rem 0 1rem;
+}
+.appCon{
+    width: 100%;
+    height: calc(100% - 8rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.menu{
+    width: 20rem;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+.menu>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    font-family: 'VariableFont';
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.menu>div:hover{
+    background-color: #0071BD;
+    color: white;
+}
+.menuImg{
+    width: 4rem;
+}
+.menuName{
+    display: none;
+}
+.content{
+    width: calc(100% - 20rem);
+    height: 100%;
+    overflow-y: auto;
+    background-color: #F1F1FB;
+    border: 1px solid #D2D2D2;
+}
+.content>div{
+    width: 100%;
+    min-height: 100%;
+}
+.menuActive{
+    background-color: #0071BD;
+    color: white;
+}
+.searchBox{
+    position: relative;
+}
+.searchImg{
+    width: 3rem !important;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+@media screen and (max-width: 760px){
+    html{
+        font-size: 8px;
+    }
+    .appHeader{
+        height: 6rem;
+        padding: 0.5rem 1rem;
+    }
+    .searchIpt{
+        width: 20rem;
+        height: 3rem;
+        border-radius: 5px;
+    }
+    .appCon{
+        display: block;
+        height: calc(100% - 6rem);
+    }
+    .menu{
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu>div{
+        width: 20%;
+        display: block;
+        margin: auto !important;
+        text-align: center;
+        border-bottom: none;
+    }
+    .content{
+        width: 100%;
+        height: calc(100% - 10rem);
+        overflow-y: auto;
+        border: none;
+    }
+    .menuName{
+        display: block;
+        font-size: 2rem;
+    }
+    .menuImg{
+        margin: auto;
+    }
+}

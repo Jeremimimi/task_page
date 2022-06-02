@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/task_page.css">
+  <link rel="stylesheet" href="css/music_page.css">
+  <link rel="stylesheet" href="css/time_page.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="appHeader">
+      <div>Task Management</div>
+      <div class="searchBox">
+        <input type="search" class="searchIpt" placeholder="Enter search content">
+        <img src="img/search.png" alt="" class="searchImg" onclick="clickSearch()">
+      </div>
+    </div>
+    <div class="appCon">
+      <div class="content">
+        <div class="task_page">
+          <div class="task_page_top">
+            <div class="task_page_top_title">Home Page Task</div>
+            <div class="addTask" onclick="defineAdd()">Add +</div>
+          </div>
+          <div class="task_page_bottom">
+            <div class="task_one"></div>
+            <div class="task_two"></div>
+            <div class="task_three"></div>
+            <div class="task_four"></div>
+          </div>
+        </div>
+        <div class="time_page">
+          <div class="time_page_title">Default Times</div>
+          <div class="time_page_text">
+            <input type="number" min="25" value="25" class="defaultTimes" oninput="initTimeInput()">
+            Minute
+          </div>
+          <div class="time_page_title">Times Off</div>
+          <div class="time_page_text">
+            <input type="number" min="5" value="5" class="timesOff" oninput="initTimeInput()">
+            Minute
+          </div>
+          <div class="time_page_title">Break Times</div>
+          <div class="time_page_text">
+            <input type="number" min="10" value="10" class="breakTimes" oninput="initTimeInput()">
+            Minute
+          </div>
+          <div class="timeBtn">SAVE</div>
+        </div>
+        <div class="music_page">
+          <div class="music_page_yf"><img src="img/yf.png" /></div>
+          <audio src="music/music1.mp3" class="musicS"></audio>
+          <div class="music_operation">
+            <div onclick="topMusic()"><img src="img/shang.png" /></div>
+            <div onclick="startMusic()"><img src="img/kai.png" class="kaiImg" /></div>
+            <div onclick="bottomMusic()"><img src="img/xia.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menuPage menuActive">
+          <div class="menuImg"><img src="img/add.png" /></div>
+          <div class="menuName">task</div>
+        </div>
+        <div class="menuPage">
+          <div class="menuImg"><img src="img/timer.png" /></div>
+          <div class="menuName">timer</div>
+        </div>
+        <div class="menuPage">
+          <div class="menuImg"><img src="img/music.png" /></div>
+          <div class="menuName">music</div>
+        </div>
+      </div>
+    </div>
+    <!--    添加数据 弹框 start-->
+    <div class="addPop">
+      <div class="addPopCon">
+        <div class="addPopTitle">Add New Task</div>
+        <div class="addPopForm">
+          <div>
+            <label><img src="img/title.png" /></label>
+            <input type="text" placeholder="Enter a task name" class="titleIpt">
+          </div>
+          <div>
+            <label><img src="img/date.png" /></label>
+            <input type="date" placeholder="Set a due day" class="dateIpt">
+          </div>
+          <div>
+            <label><img src="img/time.png" /></label>
+            <input type="number" placeholder="Set a duration" min="0" class="timeIpt">
+          </div>
+          <div>
+            <label><img src="img/level.png" /></label>
+            <select class="levelIpt">
+              <option value="0">Low</option>
+              <option value="1">Med</option>
+              <option value="2">High</option>
+            </select>
+          </div>
+          <div class="checkBox">
+            <label><img src="img/complete.png" /></label>
+            <div class="checkText">Complete the task:</div>
+            <input type="checkbox" class="checkIpt">
+          </div>
+        </div>
+        <div class="addPopBtn">
+          <div class="saveBtn">Save</div>
+          <div class="cancelBtn" onclick="cancelAdd()">Cancel</div>
+        </div>
+      </div>
+    </div>
+    <!--    添加数据 弹框 start-->
+    <!--学习弹框  start-->
+    <div class="studyPop">
+      <div class="studyPopCon">
+        <div class="studyTitle">asdasd</div>
+        <div class="studyDay">
+          <div class="dayText">15 Day</div>
+          <div class="subDay">Submission Date: 2021-5-16</div>
+          <div class="surplusText">Remaining learning time</div>
+          <div class="surplusTime">6 minute</div>
+          <div class="studyPopBtn">
+            <div class="startBtn" onclick="startStudy()">Start</div>
+            <div class="studyCancelBtn" onclick="cancelStudyPop()">Cancel</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--学习弹框  end-->
+    <!--学习计时弹框 start-->
+    <div class="startStudyPop">
+      <div class="startStudyPopCon">
+        <div class="startStudyPopTitle">Remaining time</div>
+        <div class="startStudyPopText">00:00</div>
+        <div class="startStudyPopBtn">
+          <div onclick="resetTime()">RESUME</div>
+          <div onclick="clickStartTime()"><img src="img/start.png" class="studyImg" /></div>
+          <div onclick="outStudy()">FINISH</div>
+        </div>
+      </div>
+    </div>
+    <!--学习计时弹框 end-->
+
+    <!--    休息时间弹框 start-->
+    <div class="restStudyPop">
+      <div class="restStudyPopCon">
+        <div class="restStudyPopTitle">Time Off</div>
+        <div class="restStudyPopText">00 : 00</div>
+        <div class="restStudyPopBtn" onclick="endRest()">Return</div>
+      </div>
+    </div>
+    <!--    休息时间弹框 end-->
+  </div>
+  <script src="js/menu.js"></script>
+  <script src="js/music_page.js"></script>
+  <script src="js/task_page.js"></script>
+  <script src="js/time_page.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.music_page{
+    display: none;
+}
+.music_page_yf{
+    width: 30rem;
+    height: 30rem;
+    background-color: #222222;
+    margin: 5rem auto;
+    padding: 5rem;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+.music_page_yf>img{
+    width: 100%;
+    display: block;
+}
+.music_page_ani{
+    animation: music 10s linear infinite;
+}
+.music_operation{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #222222;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.music_operation>div{
+    width: 15%;
+    cursor: pointer;
+}
+@keyframes music {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(365deg);
+    }
+}
+@media screen and (max-width: 760px){
+    .music_operation{
+        width: 90%;
+    }
+}

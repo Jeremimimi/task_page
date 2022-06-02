@@ -1,0 +1,396 @@
+.task_page{
+    background-color: #F1F1FB;
+}
+.task_page_top{
+    width: 100%;
+    display: flex;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+.task_page_top_title{
+    font-family: 'VariableFont';
+    font-size: 3rem;
+}
+.addTask{
+    font-size: 3rem;
+    font-family: Impact;
+    cursor: pointer;
+}
+.task_page_bottom{
+    width: 100%;
+    height: calc(100% - 8rem);
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+.task_page_bottom>div{
+    width: 24%;
+    margin-top: 2rem;
+}
+.task_page_bottom>div>div{
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.task_list_left{
+    width: 70%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-family: 'Regular';
+    cursor: pointer;
+}
+.task_list_right{
+    width: 30%;
+    padding: 1rem;
+    /*background-color: red;*/
+    color: white;
+    font-family: 'Regular';
+    cursor: pointer;
+}
+.addPop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.addPopCon{
+    width: 40%;
+    box-sizing: border-box;
+    background-color: white;
+
+}
+.addPopTitle{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-family: Regular;
+    background-color: #0071BD;
+}
+.addPopForm{
+    width: 100%;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+.addPopForm>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+}
+.addPopForm>div>input{
+    width: 80%;
+    padding: 0 1rem;
+    border: none;
+    font-size: 2rem;
+}
+.addPopForm>div>select{
+    width: 80%;
+    padding: 0 1rem;
+    border: none;
+    font-size: 2rem;
+}
+.addPopBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.addPopBtn>div{
+    width: 50%;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: Regular;
+}
+.saveBtn{
+    background-color: #0071BD;
+    color: white;
+}
+.cancelBtn{
+    background-color: #F1F1FB;
+    color: black;
+}
+.checkBox{
+    display: flex;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+label{
+    width: 80px;
+    text-align: center;
+}
+label>img{
+    width: 50px !important;
+    margin: auto;
+}
+.checkText{
+    font-size: 2rem;
+    color: #7575A1;
+}
+.checkBox>input{
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 1rem;
+}
+.task_one{
+    border-top: 2px solid #FE1D25;
+}
+.task_two{
+    border-top: 2px solid #F99F1D;
+}
+.task_three{
+    border-top: 2px solid #009EFF;
+}
+.task_four{
+    border-top: 2px solid #3AB54A;
+}
+.studyPop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.studyPopCon{
+    width: 40%;
+}
+.studyTitle{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: Regular;
+    padding: 1rem 0;
+    background-color: #009EFF;
+}
+.studyDay{
+    width: 100%;
+    background-color: white;
+    padding: 2rem 0;
+}
+.dayText{
+    width: 100%;
+    font-size: 4rem;
+    color: #E74032;
+    text-align: center;
+    font-family: Impact;
+}
+.subDay{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: gray;
+    font-size: 2rem;
+}
+.surplusText{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    background-color: white;
+    font-family: Impact;
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+.surplusTime{
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'VariableFont';
+    color: #E74032;
+}
+.studyPopBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.studyPopBtn>div{
+    margin: 0 5px;
+}
+.startBtn{
+    width: 20rem;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    background-color: #e74c3c;
+    text-align: center;
+    color: white;
+    font-family: Impact;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #e74c3c;
+    transition: all 0.3s;
+}
+.startBtn:hover{
+    background-color: white;
+    color: #e74c3c;
+}
+.studyCancelBtn{
+    width: 20rem;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    background-color: #3AB54A;
+    text-align: center;
+    color: white;
+    font-family: Impact;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #3AB54A;
+    transition: all 0.3s;
+}
+.studyCancelBtn:hover{
+    background-color: white;
+    color: #3AB54A;
+}
+.startStudyPop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.startStudyPopCon{
+    width: 40%;
+    padding:4rem 2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+.startStudyPopTitle{
+    width: 100%;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    font-family: Impact;
+}
+.startStudyPopText{
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
+    color: #e74c3c;
+    font-family: 'VariableFont';
+    font-size: 5rem;
+}
+.startStudyPopBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.startStudyPopBtn>div{
+    margin: 0 2rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #2D3136;
+    cursor: pointer;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'VariableFont';
+}
+.restStudyPop{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.restStudyPopCon{
+    width: 40%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 1rem;
+}
+.restStudyPopTitle{
+    width: 100%;
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Regular;
+}
+.restStudyPopText{
+    text-align: center;
+    font-size: 5rem;
+    font-family: Regular;
+    color: #e74c3c;
+}
+.restStudyPopBtn{
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #0071BD;
+    color: #0071BD;
+    font-size: 3rem;
+    font-family: 'VariableFont';
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.restStudyPopBtn:hover{
+    background-color: #0071BD;
+    color: white;
+}
+@media screen and (max-width: 760px){
+    .task_page_bottom{
+        display: block;
+    }
+    .task_page_bottom>div{
+        width: 90%;
+        margin: 2rem auto;
+    }
+    .addPopCon{
+        width: 90%;
+    }
+    .studyPopCon{
+        width: 90%;
+    }
+    .startStudyPopCon{
+        width: 90%;
+    }
+    .restStudyPopCon{
+        width: 90%;
+    }
+}
